@@ -4,15 +4,20 @@
   },
   "name": "fighting-fantasy-game",
   "version": "1.0.0",
+  "homepage": "https://kornelfrikton.github.io/fighting-fantasy-game/",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  },
   "scripts": {
     "install-server": "cd server && npm install",
     "start-server": "cd server && node index.js",
     "install-client": "cd client && npm install",
     "build-client": "cd client && npm run build",
-    "start-client": "cd client && npm run start"
+    "start-client": "cd client && npm run start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",

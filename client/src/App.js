@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import cover from "./components/pictures/cover.jpg";
-
+import 'dotenv/config'
 import Page from "./components/page";
 import Player from "./components/player";
+
+import cover from "./components/pictures/cover.jpg";
 
 function App() {
   const [book, setBook] = useState([]);
@@ -21,11 +22,9 @@ function App() {
   const coverField = character ? "hidden" : "";
   const pageField = start ? "" : "hidden";
 
-  const url = "http://localhost:4000/api";
-
   const apiCall = () => {
     axios
-      .get(url)
+      .get(process.env.API_URL)
       .then((res) => {
         console.log(res);
         return res.data;

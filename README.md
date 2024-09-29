@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# PLANET OF THE SPIDERS 
+Final Fantasy game - MERN stack application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Do you know the Final Fantasy adventure gamebooks from Ian Livingstone and Steve Jackson? 
+- If the answer is yes, then this application was built for you to have a good old time. 
+- If the answer is no, then this application was built for you to get to know this way of fun.
 
-## Available Scripts
+## Getting started
 
-In the project directory, you can run:
+The application is running in a browser (Google Chrome, Mozilla Firefox, etc.), this is not necessary to install any other applications.
+You have to just click [HERE](https://fighting-fantasy-game-01.onrender.com) to start your journey. 
 
-### `npm start`
+*Please note: sometimes it takes a few seconds to start the story because of the speed of deploy.*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to use the application
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Create your character with rolling of the dices: **Skill**, **Stamina** and **Luck**
 
-### `npm test`
+- Start your story in the **Planet of the Spiders**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Find some possible routes at the end of the pages, just click on the wanted **page number**. Choose carefully your next step!
 
-### `npm run build`
+- There are some cases, when your character point gets negative or positive **effect**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Some situation says you have to **test** your skill or your luck, in this case use the appropriate **Test** buttons
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- During your adventure you have to **fight** with enemies. You have to rolling dices to get your attack strength and compare it to the enemy's attack.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- If your stamina reaches the **0**, your journey has ended before you can finish your adventure 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Built with
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<u>Backend:</u> 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[MongoDB](https://www.mongodb.com/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Node.js](https://nodejs.org)
 
-## Learn More
+[Express](https://expressjs.com)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<u>Frontend:</u>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[React](https://reactjs.org/)
 
-### Code Splitting
+[Tailwind CSS](https://tailwindcss.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Version
 
-### Analyzing the Bundle Size
+*1.0 - 29/09/2024* - Publishing of the application  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Author
 
-### Making a Progressive Web App
+Kornel Frikton - [https://github.com/KornelFrikton](https://github.com/KornelFrikton)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Licence
 
-### Advanced Configuration
+The game is based on [Ulysses Ai - Planet of the Spiders](http://www.ffproject.com/download.htm) gamebook, special thanks for using it!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This application was built for fun, feel free to use it :)

@@ -8,8 +8,6 @@ const corsOptions = {
 
 require("dotenv").config();
 
-// app.listen(8000);
-
 const mongoose = require("mongoose");
 
 mongoose.connect(process.env.URL).then(() => {

@@ -1,15 +1,11 @@
 {
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "react-scripts": "^5.0.1"
+    "dotenv": "^16.4.5"
   },
   "name": "fighting-fantasy-game",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {
-    "gh-pages": "^6.1.1"
-  },
   "scripts": {
     "install-server": "cd server && npm install",
     "start-server": "cd server && node index.js",

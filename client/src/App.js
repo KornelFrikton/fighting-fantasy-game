@@ -21,7 +21,7 @@ function App() {
   const coverField = character ? "hidden" : "";
   const pageField = start ? "" : "hidden";
 
-  const url = process.env.REACT_APP_API_URL;
+  const url = "https://api.render.com/deploy/srv-crs5kg3tq21c73dcaf50?key=QS2_SMuicSw";
 
   const apiCall = () => {
     axios

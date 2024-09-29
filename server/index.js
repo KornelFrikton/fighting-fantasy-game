@@ -3,7 +3,7 @@ const app = express();
 
 const cors = require("cors");
 const corsOptions = {
-  origin: "http://localhost:3000"
+  origin: "https://fighting-fantasy-game-01.onrender.com/"
 }
 
 require("dotenv").config();

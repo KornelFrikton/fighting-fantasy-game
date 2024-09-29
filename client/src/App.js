@@ -21,7 +21,7 @@ function App() {
   const coverField = character ? "hidden" : "";
   const pageField = start ? "" : "hidden";
 
-  const url = "https://api.render.com/deploy/srv-crs5kg3tq21c73dcaf50?key=QS2_SMuicSw";
+  const url = "https://fighting-fantasy-game-rlrw.onrender.com/";
 
   const apiCall = () => {
     axios

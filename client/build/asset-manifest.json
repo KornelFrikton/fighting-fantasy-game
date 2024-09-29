@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/fighting-fantasy-game/static/css/main.e0ca650c.css",
+    "main.js": "/fighting-fantasy-game/static/js/main.91e6bf7a.js",
+    "static/media/cover.jpg": "/fighting-fantasy-game/static/media/cover.1f50e6b6cb4bb3e1cbbc.jpg",
+    "static/media/zero.svg": "/fighting-fantasy-game/static/media/zero.d336b6ea3c20558a54aa92ff5b608e23.svg",
+    "static/media/fizzing-flask.svg": "/fighting-fantasy-game/static/media/fizzing-flask.758741e5c5f8ecfa8a57bb85149d3182.svg",
+    "static/media/book-cover.svg": "/fighting-fantasy-game/static/media/book-cover.dec2ca80952847e46612530e2213cbbc.svg",
+    "static/media/coinflip.svg": "/fighting-fantasy-game/static/media/coinflip.639253bb6802032e455247d99a742596.svg",
+    "static/media/shamrock.svg": "/fighting-fantasy-game/static/media/shamrock.d98aefb2d1fdb29fb5232ffea968160a.svg",
+    "static/media/crossed-swords.svg": "/fighting-fantasy-game/static/media/crossed-swords.e7128d96aa8459d21b0a0fa9c81902d3.svg",
+    "static/media/mighty-force.svg": "/fighting-fantasy-game/static/media/mighty-force.5a3cd7c39cb65180c30b1eadfecef562.svg",
+    "static/media/tombstone.svg": "/fighting-fantasy-game/static/media/tombstone.519ccb757154c003dd0d50018c40e479.svg",
+    "index.html": "/fighting-fantasy-game/index.html",
+    "static/media/six.svg": "/fighting-fantasy-game/static/media/six.ad06ed1e14ed41531af316d743f2e8ad.svg",
+    "static/media/five.svg": "/fighting-fantasy-game/static/media/five.54a9a13bf4a3a6ae8dc422bef365a7b8.svg",
+    "static/media/stars-stack.svg": "/fighting-fantasy-game/static/media/stars-stack.0650faf0447e220fde82f382081fc505.svg",
+    "static/media/four.svg": "/fighting-fantasy-game/static/media/four.9afc9b19af580ae88548095c38673197.svg",
+    "static/media/life-bar.svg": "/fighting-fantasy-game/static/media/life-bar.7c6db57a97280c81e3f113cd11594d14.svg",
+    "static/media/three.svg": "/fighting-fantasy-game/static/media/three.2b9191849d8b1ec66c10d392ca3e6c8d.svg",
+    "static/media/two.svg": "/fighting-fantasy-game/static/media/two.0424af212873e6df3b17adcef13469f3.svg",
+    "static/media/direction-signs.svg": "/fighting-fantasy-game/static/media/direction-signs.cb94730e44dcf64be55c8ecf2849a563.svg",
+    "static/media/one.svg": "/fighting-fantasy-game/static/media/one.db9d4a866c147c1d74f818ee53cea5d1.svg",
+    "main.e0ca650c.css.map": "/fighting-fantasy-game/static/css/main.e0ca650c.css.map",
+    "main.91e6bf7a.js.map": "/fighting-fantasy-game/static/js/main.91e6bf7a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0ca650c.css",
+    "static/js/main.91e6bf7a.js"
+  ]
+}

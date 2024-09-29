@@ -32,7 +32,7 @@ app.use(express.json());
 
 const Page = require('./models/book');
 
-app.get("/api", async (req, res) => {
+app.get("/", async (req, res) => {
   try {
     const allPages = await Page.find();
     res.send(allPages);

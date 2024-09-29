@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import 'dotenv/config'
 import Page from "./components/page";
 import Player from "./components/player";
 
@@ -22,9 +21,11 @@ function App() {
   const coverField = character ? "hidden" : "";
   const pageField = start ? "" : "hidden";
 
+  const url = process.env.REACT_APP_API_URL;
+
   const apiCall = () => {
     axios
-      .get(process.env.API_URL)
+      .get(url)
       .then((res) => {
         console.log(res);
         return res.data;

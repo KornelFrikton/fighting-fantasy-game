@@ -37,18 +37,18 @@ function Lucktest({ luck, getRandomDice, handleClose }) {
 
   return (
     <div>
-      <div className="p-1 tracking-tight text-lg">
+      <div className="p-1 text-lg tracking-tight">
         If you are asked to test your LUCK, do so in the way as for the test of
         SKILL. The only difference is that when you test your LUCK, you must
         reduce your current LUCK by 1.
       </div>
-      <div className="text-xl font-bold uppercase tracking-wider p-2">
+      <div className="p-2 text-xl font-bold uppercase tracking-wider">
         <div> Test total: {testLuck + testLuck2} </div>
         <div>Your luck: {luck} </div>
         <div className={showResult}>Luck test: {result}</div>
       </div>
       <button
-        className="rounded-lg m-2 enabled:hover:scale-110"
+        className="m-2 rounded-lg enabled:hover:scale-110"
         onClick={handleTestLuck}
         value="first"
         disabled={testLuck}
@@ -56,7 +56,7 @@ function Lucktest({ luck, getRandomDice, handleClose }) {
         <Dice spin={testLuck} />
       </button>
       <button
-        className="rounded-lg m-2 enabled:hover:scale-110"
+        className="m-2 rounded-lg enabled:hover:scale-110"
         onClick={handleTestLuck}
         value="second"
         disabled={testLuck2}
@@ -65,7 +65,7 @@ function Lucktest({ luck, getRandomDice, handleClose }) {
       </button>
       <div>
         <button
-          className="w-40 text-xl font-bold uppercase tracking-wider rounded m-2 p-3 bg-green-700 disabled:bg-red-700 disabled:opacity-50"
+          className="m-2 w-40 rounded bg-green-700 p-3 text-xl font-bold uppercase tracking-wider disabled:bg-red-700 disabled:opacity-50"
           onClick={handleCloseTest}
           disabled={!testLuck || !testLuck2}
         >

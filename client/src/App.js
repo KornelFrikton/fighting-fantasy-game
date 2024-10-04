@@ -94,10 +94,10 @@ function App() {
   ));
 
   return (
-    <div className="bg-stone-800 text-white text-center min-h-screen">
+    <div className="min-h-screen bg-stone-800 text-center text-white">
       <header>
         <div className={coverField}>
-          <h1 className="text-5xl font-bold uppercase tracking-wider p-4">
+          <h1 className="p-4 text-5xl font-bold uppercase tracking-wider">
             Planet of the Spiders
           </h1>
           <button onClick={apiCall}>
@@ -107,7 +107,7 @@ function App() {
               alt="Planet of the Spiders"
             />
           </button>
-          <div className="text-lg font-bold uppercase tracking-wider p-4">
+          <div className="p-4 text-lg font-bold uppercase tracking-wider">
             Click on the picture to start your journey
           </div>
         </div>

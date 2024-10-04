@@ -33,8 +33,8 @@ function Dice({ spin }) {
   }, [spin]);
 
   return (
-    <div>     
-        <img className="h-14 rounded-lg" src={diceSide} alt={diceSide} />
+    <div>
+      <img className="h-14 rounded-lg" src={diceSide} alt={diceSide} />
     </div>
   );
 }

@@ -38,32 +38,28 @@ function Page({ page, text, routes, handleTurn, reduces }) {
 
   return (
     <div>
-      <div className="bg-gradient-to-tr from-sky-900 to-lime-900 border-4 rounded mx-4 p-2 flex justify-center items-center text-xl font-bold uppercase tracking-wider">
-        <img className="h-8 rounded-md mr-2" src={book} alt="Page" />
+      <div className="mx-4 flex items-center justify-center rounded border-4 bg-gradient-to-tr from-sky-900 to-lime-900 p-2 text-xl font-bold uppercase tracking-wider">
+        <img className="mr-2 h-8 rounded-md" src={book} alt="Page" />
         Page: {page}
       </div>
-      <div
-        className="bg-gradient-to-br from-sky-900 to-lime-900 border-4 rounded mx-4 p-2 text-lg text-left
-      first-line:uppercase first-line:tracking-widest
-  first-letter:text-7xl first-letter:font-bold first-letter:text-white
-  first-letter:mr-2 first-letter:float-left"
-      >
+      <div className="mx-4 rounded border-4 bg-gradient-to-br from-sky-900 to-lime-900 p-2 text-left text-lg first-letter:float-left first-letter:mr-2 first-letter:text-7xl first-letter:font-bold first-letter:text-white first-line:uppercase first-line:tracking-widest">
         {text}
       </div>
       <div className={effectField}>
-      <img className="h-8 rounded-md mr-2" src={flask} alt="Effect" />
-        {effect}</div>
+        <img className="mr-2 h-8 rounded-md" src={flask} alt="Effect" />
+        {effect}
+      </div>
 
-      <div className="bg-gradient-to-tr from-sky-900 to-lime-900 border-4 rounded mx-4 p-2 text-xl text-left">
-        <div className="flex justify-center items-center text-xl font-bold uppercase tracking-wider text-center">
-          <img className="h-8 rounded-md mr-2" src={direction} alt="Routes" />
+      <div className="mx-4 rounded border-4 bg-gradient-to-tr from-sky-900 to-lime-900 p-2 text-left text-xl">
+        <div className="flex items-center justify-center text-center text-xl font-bold uppercase tracking-wider">
+          <img className="mr-2 h-8 rounded-md" src={direction} alt="Routes" />
           Routes:
         </div>
         {actualRoute.map((item) => (
           <div className="py-4" key={item._id}>
             {item.routeText} page
             <button
-              className="w-1/8 border-2 text-xl font-bold uppercase tracking-wider rounded mx-2 px-2 hover:scale-110"
+              className="w-1/8 mx-2 rounded border-2 px-2 text-xl font-bold uppercase tracking-wider hover:scale-110"
               onClick={handleTurn}
               value={item.nextPage}
             >

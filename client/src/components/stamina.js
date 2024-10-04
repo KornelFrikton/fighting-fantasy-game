@@ -1,21 +1,22 @@
-import React, { useRef }  from "react";
+import React, { useRef } from "react";
 
-import life from './pictures/life-bar.svg';
+import life from "./pictures/life-bar.svg";
 
 function Stamina({ stamina, staminaReady }) {
-
   const staminaPositive = useRef(false);
 
   if (staminaReady && !staminaPositive.current) {
     staminaPositive.current = true;
   }
 
-  const staminaField = staminaPositive.current ? "hidden" : "p-1 tracking-tight text-lg";
+  const staminaField = staminaPositive.current
+    ? "hidden"
+    : "p-1 tracking-tight text-lg";
 
   return (
     <div>
-      <div className="text-2xl flex justify-center items-center font-bold uppercase tracking-wider p-1">
-      <img className="h-8 rounded-md mr-2" src={life} alt="Stamina" />
+      <div className="flex items-center justify-center p-1 text-2xl font-bold uppercase tracking-wider">
+        <img className="mr-2 h-8 rounded-md" src={life} alt="Stamina" />
         Stamina: {stamina}
       </div>
       <div className={staminaField}>

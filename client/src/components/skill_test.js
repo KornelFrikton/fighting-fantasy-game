@@ -37,18 +37,18 @@ function Skilltest({ skill, getRandomDice, handleClose }) {
 
   return (
     <div>
-      <div className="p-1 tracking-tight text-lg">
+      <div className="p-1 text-lg tracking-tight">
         If you are ever asked to test your SKILL, roll 2 die. If the total is
         the same or less than your SKILL, then you are successful. If the dice
         roll is higher, then you have failed.
       </div>
-      <div className="text-xl font-bold uppercase tracking-wider p-2">
+      <div className="p-2 text-xl font-bold uppercase tracking-wider">
         <div>Test total: {testSkill + testSkill2}</div>
         <div>Your skill: {skill}</div>
         <div className={showResult}>Skill test: {result}</div>
       </div>
       <button
-        className="rounded-lg m-2 enabled:hover:scale-110"
+        className="m-2 rounded-lg enabled:hover:scale-110"
         onClick={handleTestSkill}
         value="first"
         disabled={testSkill}
@@ -56,7 +56,7 @@ function Skilltest({ skill, getRandomDice, handleClose }) {
         <Dice spin={testSkill} />
       </button>
       <button
-        className="rounded-lg m-2 enabled:hover:scale-110"
+        className="m-2 rounded-lg enabled:hover:scale-110"
         onClick={handleTestSkill}
         value="second"
         disabled={testSkill2}
@@ -65,7 +65,7 @@ function Skilltest({ skill, getRandomDice, handleClose }) {
       </button>
       <div>
         <button
-          className="w-40 text-xl font-bold uppercase tracking-wider rounded m-2 p-3 bg-green-700 disabled:bg-red-700 disabled:opacity-50"
+          className="m-2 w-40 rounded bg-green-700 p-3 text-xl font-bold uppercase tracking-wider disabled:bg-red-700 disabled:opacity-50"
           onClick={handleCloseTest}
           disabled={!testSkill || !testSkill2}
         >

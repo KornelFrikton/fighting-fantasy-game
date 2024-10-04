@@ -33,7 +33,7 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
 
   const resetField = dead ? "flex-auto" : "hidden";
   const resetActive = dead ? "hidden" : "";
-    
+
   const combatActive = enemy.name ? "" : "hidden";
 
   useEffect(() => {
@@ -118,16 +118,16 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
   return (
     <div>
       <div className={afterStart}>
-        <h2 className="text-3xl font-bold uppercase tracking-wider p-4 drop-shadow-md">
+        <h2 className="p-4 text-3xl font-bold uppercase tracking-wider drop-shadow-md">
           Creating your character
         </h2>
       </div>
       <div className="flex flex-wrap justify-center py-4">
-        <div className="bg-gradient-to-r from-amber-900 border-4 rounded mx-4 p-2 min-w-60">
+        <div className="mx-4 min-w-60 rounded border-4 bg-gradient-to-r from-amber-900 p-2">
           <Skill skill={skill} />
           <div className={afterStart}>
             <button
-              className="rounded-lg m-2 enabled:hover:scale-110"
+              className="m-2 rounded-lg enabled:hover:scale-110"
               disabled={skill}
               onClick={handleGenerateSkill}
             >
@@ -136,14 +136,14 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-amber-900 border-4 rounded mx-4 p-2 min-w-60">
+        <div className="mx-4 min-w-60 rounded border-4 bg-gradient-to-r from-amber-900 p-2">
           <Stamina
             stamina={stamina + stamina2}
             staminaReady={stamina && stamina2}
           />
           <div className={afterStart}>
             <button
-              className="rounded-lg m-2 enabled:hover:scale-110"
+              className="m-2 rounded-lg enabled:hover:scale-110"
               disabled={stamina}
               value="first"
               onClick={handleGenerateStamina}
@@ -152,7 +152,7 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
             </button>
 
             <button
-              className="rounded-lg m-2 enabled:hover:scale-110"
+              className="m-2 rounded-lg enabled:hover:scale-110"
               disabled={stamina2}
               value="second"
               onClick={handleGenerateStamina}
@@ -162,11 +162,11 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-amber-900 border-4 rounded mx-4 p-2 min-w-60">
+        <div className="mx-4 min-w-60 rounded border-4 bg-gradient-to-r from-amber-900 p-2">
           <Luck luck={luck} />
           <div className={afterStart}>
             <button
-              className="rounded-lg m-2 enabled:hover:scale-110"
+              className="m-2 rounded-lg enabled:hover:scale-110"
               disabled={luck}
               onClick={handleGenerateLuck}
             >
@@ -178,7 +178,7 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
       <div className="flex flex-wrap">
         <div className={startField}>
           <button
-            className="w-40 text-2xl font-bold uppercase tracking-wider rounded m-4 p-3 bg-green-600 enabled:hover:scale-110 disabled:bg-red-700 disabled:opacity-50"
+            className="m-4 w-40 rounded bg-green-600 p-3 text-2xl font-bold uppercase tracking-wider enabled:hover:scale-110 disabled:bg-red-700 disabled:opacity-50"
             disabled={!skill || !stamina || !stamina2 || !luck}
             onClick={handleStart}
           >
@@ -188,15 +188,15 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
 
         <div className={resetField}>
           <button
-            className="w-40 text-2xl font-bold uppercase tracking-wider rounded m-4 p-3 bg-green-600 enabled:hover:scale-110 disabled:bg-red-700 disabled:opacity-50"
+            className="m-4 w-40 rounded bg-green-600 p-3 text-2xl font-bold uppercase tracking-wider enabled:hover:scale-110 disabled:bg-red-700 disabled:opacity-50"
             disabled={!dead}
             type="reset"
             onClick={handleReset}
           >
             Restart
           </button>
-          <div className="bg-neutral-900 border-4 rounded m-4 p-2 flex justify-center items-center text-xl font-bold uppercase tracking-wider">
-            <img className="h-8 rounded-md mr-2" src={tombstone} alt="Dead" />
+          <div className="m-4 flex items-center justify-center rounded border-4 bg-neutral-900 p-2 text-xl font-bold uppercase tracking-wider">
+            <img className="mr-2 h-8 rounded-md" src={tombstone} alt="Dead" />
             You are dead
           </div>
         </div>
@@ -206,13 +206,13 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
         <div className="flex flex-wrap">
           <div className={showTestSkill}>
             <button
-              className="w-60 text-xl font-bold uppercase tracking-wider rounded m-3 p-2 bg-green-600 enabled:hover:scale-110 disabled:bg-red-700 disabled:opacity-50"
+              className="m-3 w-60 rounded bg-green-600 p-2 text-xl font-bold uppercase tracking-wider enabled:hover:scale-110 disabled:bg-red-700 disabled:opacity-50"
               onClick={handleStartSkillTest}
               disabled={!start}
             >
               <p>
                 <img
-                  className="h-8 float-left rounded-md mx-1"
+                  className="float-left mx-1 h-8 rounded-md"
                   src={coinflip}
                   alt="Test"
                 />
@@ -230,13 +230,13 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
           </div>
           <div className={showTestLuck}>
             <button
-              className="w-60 text-xl font-bold uppercase tracking-wider rounded m-3 p-2 bg-green-600 enabled:hover:scale-110 disabled:bg-red-700 disabled:opacity-50"
+              className="m-3 w-60 rounded bg-green-600 p-2 text-xl font-bold uppercase tracking-wider enabled:hover:scale-110 disabled:bg-red-700 disabled:opacity-50"
               onClick={handleStartLuckTest}
               disabled={!start}
             >
               <p>
                 <img
-                  className="h-8 float-left rounded-md mx-1"
+                  className="float-left mx-1 h-8 rounded-md"
                   src={coinflip}
                   alt="Test"
                 />

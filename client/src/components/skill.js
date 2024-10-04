@@ -1,14 +1,14 @@
 import React from "react";
 
-import stars from './pictures/stars-stack.svg';
+import stars from "./pictures/stars-stack.svg";
 
 function Skill({ skill }) {
   const skillField = skill ? "hidden" : "p-1 tracking-tight text-lg";
 
   return (
     <div>
-      <div className="text-2xl flex justify-center items-center font-bold uppercase tracking-wider p-1">
-      <img className="h-8 rounded-md mr-2" src={stars} alt="Skill" />
+      <div className="flex items-center justify-center p-1 text-2xl font-bold uppercase tracking-wider">
+        <img className="mr-2 h-8 rounded-md" src={stars} alt="Skill" />
         Skill: {skill}
       </div>
       <div className={skillField}>

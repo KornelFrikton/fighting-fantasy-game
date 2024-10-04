@@ -86,11 +86,11 @@ function Combat({ enemy, skill, stamina, staminaDecrease, getRandomDice }) {
 
   return (
     <div>
-      <h2 className="bg-gradient-to-r from-red-900 to-slate-900 border-4 rounded m-4 p-2 flex justify-center items-center text-xl font-bold uppercase tracking-wider">
-        <img className="h-8 rounded-md mr-2" src={combat} alt="Combat" />
+      <h2 className="m-4 flex items-center justify-center rounded border-4 bg-gradient-to-r from-red-900 to-slate-900 p-2 text-xl font-bold uppercase tracking-wider">
+        <img className="mr-2 h-8 rounded-md" src={combat} alt="Combat" />
         Combat
       </h2>
-      <ol className="list-decimal list-outside tracking-tight text-left pl-6 p-2 m-4 border rounded ">
+      <ol className="m-4 list-outside list-decimal rounded border p-2 pl-6 text-left tracking-tight">
         <li>
           Roll 2 dice and add the result to your SKILL. The total is your Attack
           Strength.
@@ -118,24 +118,24 @@ function Combat({ enemy, skill, stamina, staminaDecrease, getRandomDice }) {
       </ol>
       <div className={afterWin}>
         <div className="flex flex-wrap">
-          <div className="bg-gradient-to-r from-red-900 to-slate-900 border-4 border-b-2 rounded mx-4 p-2 flex-auto basis-1/2 text-xl font-bold uppercase tracking-wider">
+          <div className="mx-4 flex-auto basis-1/2 rounded border-4 border-b-2 bg-gradient-to-r from-red-900 to-slate-900 p-2 text-xl font-bold uppercase tracking-wider">
             <div> Enemy name: {enemy.name}</div>
             <div> Enemy skill: {enemy.skill}</div>
             <div> Enemy stamina: {enemyStamina}</div>
           </div>
-          <div className="bg-gradient-to-r from-red-900 to-slate-900 border-x-4 border-y-2 rounded mx-4 p-2 flex-auto basis-1/2 text-xl font-bold uppercase tracking-wider">
+          <div className="mx-4 flex-auto basis-1/2 rounded border-x-4 border-y-2 bg-gradient-to-r from-red-900 to-slate-900 p-2 text-xl font-bold uppercase tracking-wider">
             <div> Your skill: {skill} </div>
             <div> Your stamina: {stamina} </div>
           </div>
         </div>
-        <div className="bg-gradient-to-r from-red-900 to-slate-900 border-4 border-t-2 rounded mx-4 mb-4 p-2 flex-auto text-xl font-bold uppercase tracking-wider">
+        <div className="mx-4 mb-4 flex-auto rounded border-4 border-t-2 bg-gradient-to-r from-red-900 to-slate-900 p-2 text-xl font-bold uppercase tracking-wider">
           <div>Your Attack Strength: {attackStrength}</div>
           <div>Enemy Attack Strength: {enemyAttackStrength}</div>
         </div>
 
         <div className={fightButton}>
           <button
-            className="w-40 text-xl font-bold uppercase tracking-wider rounded m-4 p-3 bg-green-600 enabled:hover:scale-110 disabled:bg-red-700 disabled:opacity-50"
+            className="m-4 w-40 rounded bg-green-600 p-3 text-xl font-bold uppercase tracking-wider enabled:hover:scale-110 disabled:bg-red-700 disabled:opacity-50"
             onClick={handleFight}
             disabled={fightActive}
           >
@@ -144,18 +144,18 @@ function Combat({ enemy, skill, stamina, staminaDecrease, getRandomDice }) {
         </div>
         <div className={nextButton}>
           <button
-            className="w-40 text-xl font-bold uppercase tracking-wider rounded m-4 p-3 bg-green-600 enabled:hover:scale-110 disabled:bg-red-700 disabled:opacity-50"
+            className="m-4 w-40 rounded bg-green-600 p-3 text-xl font-bold uppercase tracking-wider enabled:hover:scale-110 disabled:bg-red-700 disabled:opacity-50"
             onClick={handleNextTurn}
           >
             Next turn
           </button>
         </div>
         <div className="flex">
-          <div className="bg-gradient-to-t from-red-900 to-slate-900 border-4 rounded m-4 p-2 flex-auto basis-1/2 text-xl font-bold uppercase tracking-wider">
+          <div className="m-4 flex-auto basis-1/2 rounded border-4 bg-gradient-to-t from-red-900 to-slate-900 p-2 text-xl font-bold uppercase tracking-wider">
             Your Attack:
             <div>
               <button
-                className="rounded-lg m-2 enabled:hover:scale-110"
+                className="m-2 rounded-lg enabled:hover:scale-110"
                 onClick={handleAttack}
                 value="first"
                 disabled={attack}
@@ -163,7 +163,7 @@ function Combat({ enemy, skill, stamina, staminaDecrease, getRandomDice }) {
                 <Dice spin={attack} />
               </button>
               <button
-                className="rounded-lg m-2 enabled:hover:scale-110"
+                className="m-2 rounded-lg enabled:hover:scale-110"
                 onClick={handleAttack}
                 value="second"
                 disabled={attack2}
@@ -172,11 +172,11 @@ function Combat({ enemy, skill, stamina, staminaDecrease, getRandomDice }) {
               </button>
             </div>
           </div>
-          <div className="bg-gradient-to-t from-red-900 to-slate-900 border-4 rounded m-4 p-2 flex-auto basis-1/2 text-xl font-bold uppercase tracking-wider">
+          <div className="m-4 flex-auto basis-1/2 rounded border-4 bg-gradient-to-t from-red-900 to-slate-900 p-2 text-xl font-bold uppercase tracking-wider">
             Enemy's Attack:
             <div>
               <button
-                className="rounded-lg m-2 enabled:hover:scale-110"
+                className="m-2 rounded-lg enabled:hover:scale-110"
                 onClick={handleEnemyAttack}
                 value="first"
                 disabled={enemyAttack}
@@ -184,7 +184,7 @@ function Combat({ enemy, skill, stamina, staminaDecrease, getRandomDice }) {
                 <Dice spin={enemyAttack} />
               </button>
               <button
-                className="rounded-lg m-2 enabled:hover:scale-110"
+                className="m-2 rounded-lg enabled:hover:scale-110"
                 onClick={handleEnemyAttack}
                 value="second"
                 disabled={enemyAttack2}
@@ -196,7 +196,7 @@ function Combat({ enemy, skill, stamina, staminaDecrease, getRandomDice }) {
         </div>
       </div>
       <div className={win}>
-        <img className="h-8 rounded-md mr-2" src={winner} alt="Winner" />
+        <img className="mr-2 h-8 rounded-md" src={winner} alt="Winner" />
         You win!
       </div>
     </div>

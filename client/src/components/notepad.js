@@ -4,7 +4,7 @@ function Notepad() {
   return (
     <div className="p-4">
       <textarea
-        className="placeholder:italic placeholder:text-slate-400 rounded-md w-4/5 px-2 py-1 resize-none text-black sm:text-sm text focus:outline-none focus:ring-sky-500 focus:ring-2 focus:border-sky-500"
+        className="text w-4/5 resize-none rounded-md px-2 py-1 text-black placeholder:italic placeholder:text-slate-400 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500 sm:text-sm"
         placeholder="You can make notes here during your journey..."
         rows="5"
       ></textarea>

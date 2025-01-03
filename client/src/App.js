@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Page from "./components/page";
 import Player from "./components/player";
+import Spinner from "./components/spinner";
 
 import cover from "./components/pictures/cover.jpg";
 
@@ -10,6 +11,7 @@ function App() {
   const [allPage, setallPage] = useState([]);
 
   const [actual, setActual] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   const [reduces, setReduces] = useState({ skill: 0, luck: 0, stamina: 0 });
   const [enemy, setEnemy] = useState({ name: "", skill: 0, stamina: 0 });
@@ -24,6 +26,8 @@ function App() {
   const url = "https://fighting-fantasy-game-rlrw.onrender.com";
 
   const apiCall = () => {
+    setIsLoading(true);
+
     axios
       .get(url)
       .then((res) => {
@@ -37,6 +41,9 @@ function App() {
       })
       .catch((error) => {
         console.error("Error during API call:", error);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
@@ -108,7 +115,11 @@ function App() {
             />
           </button>
           <div className="p-4 text-lg font-bold uppercase tracking-wider">
-            Click on the picture to start your journey
+            {isLoading ? (
+              <Spinner />
+            ) : (
+              "Click on the picture to start your journey"
+            )}
           </div>
         </div>
         <div className={characterField}>

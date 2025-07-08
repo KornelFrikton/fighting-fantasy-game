@@ -25,26 +25,24 @@ function App() {
 
   const url = "https://fighting-fantasy-game-rlrw.onrender.com";
 
-  const apiCall = () => {
+  const apiCall = async () => {
     setIsLoading(true);
+    console.log("apiCall triggered");
 
-    axios
-      .get(url)
-      .then((res) => {
-        console.log(res);
-        return res.data;
-      })
-      .then((data) => {
-        console.log(data);
-        setBook(data);
-        setCharacter(true);
-      })
-      .catch((error) => {
-        console.error("Error during API call:", error);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
+    const timeoutPromise = new Promise((_, reject) =>
+      setTimeout(() => reject(new Error("Request timed out")), 15000),
+    );
+
+    try {
+      const res = await Promise.race([axios.get(url), timeoutPromise]);
+      setBook(res.data);
+      setCharacter(true);
+    } catch (error) {
+      console.error("Error:", error.message);
+      alert("Render.com's free server is taking too long. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {

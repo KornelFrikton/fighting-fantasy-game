@@ -10,6 +10,7 @@ import Notepad from "./notepad";
 
 import coinflip from "./pictures/coinflip.svg";
 import tombstone from "./pictures/tombstone.svg";
+import info from "./pictures/info.svg";
 
 function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
   const [skill, setSkill] = useState(0);
@@ -96,6 +97,15 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
     setShowLuck(false);
   }
 
+  function handleGiveUp() {
+    const confirmed = window.confirm(
+      "Are you sure you want to give up this journey?",
+    );
+    if (confirmed) {
+      setDead(true);
+    }
+  }
+
   function handleStartLuckTest() {
     setShowLuck(true);
     setShowSkill(false);
@@ -123,8 +133,8 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
         </h2>
       </div>
       <div className="flex flex-wrap justify-center py-4">
-        <div className="mx-4 min-w-60 rounded border-4 bg-gradient-to-r from-amber-900 p-2">
-          <Skill skill={skill} />
+        <div className="mx-4 mb-2 min-w-60 rounded border-4 bg-gradient-to-r from-amber-900 p-2">
+          <Skill skill={skill} showDescription={!start} />
           <div className={afterStart}>
             <button
               className="m-2 rounded-lg enabled:hover:scale-110"
@@ -136,11 +146,8 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
           </div>
         </div>
 
-        <div className="mx-4 min-w-60 rounded border-4 bg-gradient-to-r from-amber-900 p-2">
-          <Stamina
-            stamina={stamina + stamina2}
-            staminaReady={stamina && stamina2}
-          />
+        <div className="mx-4 mb-2 min-w-60 rounded border-4 bg-gradient-to-r from-amber-900 p-2">
+          <Stamina stamina={stamina + stamina2} showDescription={!start} />
           <div className={afterStart}>
             <button
               className="m-2 rounded-lg enabled:hover:scale-110"
@@ -162,8 +169,8 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
           </div>
         </div>
 
-        <div className="mx-4 min-w-60 rounded border-4 bg-gradient-to-r from-amber-900 p-2">
-          <Luck luck={luck} />
+        <div className="mx-4 mb-2 min-w-60 rounded border-4 bg-gradient-to-r from-amber-900 p-2">
+          <Luck luck={luck} showDescription={!start} />
           <div className={afterStart}>
             <button
               className="m-2 rounded-lg enabled:hover:scale-110"
@@ -266,6 +273,16 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
         <div>
           <Notepad />
         </div>
+      </div>
+      <div className={!resetField}>
+        <button
+          className="text-l mb-4 w-60 rounded bg-red-700 p-2 font-bold uppercase tracking-wider enabled:hover:scale-110 disabled:opacity-50"
+          disabled={!start || dead}
+          type="reset"
+          onClick={handleGiveUp}
+        >
+          Give up the journey
+        </button>
       </div>
     </div>
   );

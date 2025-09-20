@@ -1,17 +1,9 @@
-import React, { useRef } from "react";
+import React from "react";
 
 import shamrock from "./pictures/shamrock.svg";
 
-function Luck({ luck }) {
-  const luckPositive = useRef(false);
-
-  if (luck > 0 && !luckPositive.current) {
-    luckPositive.current = true;
-  }
-
-  const luckField = luckPositive.current
-    ? "hidden"
-    : "p-1 tracking-tight text-lg";
+function Luck({ luck, showDescription }) {
+  const luckField = showDescription ? "p-1 tracking-tight text-lg" : "hidden";
 
   return (
     <div>

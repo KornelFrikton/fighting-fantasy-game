@@ -1,17 +1,11 @@
-import React, { useRef } from "react";
+import React from "react";
 
 import life from "./pictures/life-bar.svg";
 
-function Stamina({ stamina, staminaReady }) {
-  const staminaPositive = useRef(false);
-
-  if (staminaReady && !staminaPositive.current) {
-    staminaPositive.current = true;
-  }
-
-  const staminaField = staminaPositive.current
-    ? "hidden"
-    : "p-1 tracking-tight text-lg";
+function Stamina({ stamina, showDescription }) {
+  const staminaField = showDescription
+    ? "p-1 tracking-tight text-lg"
+    : "hidden";
 
   return (
     <div>

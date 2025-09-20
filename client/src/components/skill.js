@@ -2,8 +2,8 @@ import React from "react";
 
 import stars from "./pictures/stars-stack.svg";
 
-function Skill({ skill }) {
-  const skillField = skill ? "hidden" : "p-1 tracking-tight text-lg";
+function Skill({ skill, showDescription }) {
+  const skillField = showDescription ? "p-1 tracking-tight text-lg" : "hidden";
 
   return (
     <div>

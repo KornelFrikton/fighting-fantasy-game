@@ -7,6 +7,7 @@ import Skilltest from "./skill_test";
 import Lucktest from "./luck_test";
 import Combat from "./combat";
 import Notepad from "./notepad";
+import HowToPlay from "./howtoplay";
 
 import coinflip from "./pictures/coinflip.svg";
 import tombstone from "./pictures/tombstone.svg";
@@ -36,6 +37,8 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
   const resetActive = dead ? "hidden" : "";
 
   const combatActive = enemy.name ? "" : "hidden";
+
+  const [showCarousel, setShowCarousel] = useState(false);
 
   useEffect(() => {
     const reducesLuck = parseInt(reduces.luck);
@@ -133,6 +136,27 @@ function Player({ reduces, enemy, handleStart, start, newGame, handleDead }) {
         </h2>
       </div>
       <div className="flex flex-wrap justify-center py-4">
+        <button
+          onClick={() => setShowCarousel(true)}
+          className="group fixed right-2 top-5 z-50 hover:scale-110"
+          aria-label="Info"
+        >
+          <img
+            className="inline-block h-6 rounded-full"
+            src={info}
+            alt="Information"
+          ></img>
+
+          <span className="absolute right-full top-1/2 hidden w-max -translate-y-1/2 rounded bg-gray-900 px-2 py-1 text-xs text-white group-hover:block">
+            How to play
+          </span>
+        </button>
+
+        <HowToPlay
+          isOpen={showCarousel}
+          onClose={() => setShowCarousel(false)}
+        />
+
         <div className="mx-4 mb-2 min-w-60 rounded border-4 bg-gradient-to-r from-amber-900 p-2">
           <Skill skill={skill} showDescription={!start} />
           <div className={afterStart}>

@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 
-import slide1 from "./pictures/howtoplay/Slide1.png";
-import slide2 from "./pictures/howtoplay/Slide2.png";
+import slide1 from "./pictures/howtoplay/Slide1.jpg";
+import slide2 from "./pictures/howtoplay/Slide2.jpg";
+import slide3 from "./pictures/howtoplay/Slide3.jpg";
+import slide4 from "./pictures/howtoplay/Slide4.jpg";
+import slide5 from "./pictures/howtoplay/Slide5.jpg";
 
-const images = [slide1, slide2];
+const images = [slide1, slide2, slide3, slide4, slide5];
 
 function HowToPlay({ isOpen, onClose }) {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  if (!isOpen) return null;
 
   const prevSlide = () => {
     setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -16,14 +21,12 @@ function HowToPlay({ isOpen, onClose }) {
     setActiveIndex((prev) => (prev + 1) % images.length);
   };
 
-  if (!isOpen) return null;
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
-      <div className="relative w-full max-w-xl rounded-lg bg-stone-800 p-4">
+      <div className="relative w-full max-w-lg rounded-lg bg-stone-800 p-4">
         <button
           onClick={onClose}
-          className="absolute right-2 top-1 text-2xl text-white hover:text-red-500"
+          className="absolute right-3 top-1 text-3xl text-white hover:text-red-500"
         >
           &times;
         </button>
@@ -39,7 +42,7 @@ function HowToPlay({ isOpen, onClose }) {
           <img
             src={images[activeIndex]}
             alt={`Slide ${activeIndex + 1}`}
-            className="max-h-[450px] object-cover md:max-h-[500px]"
+            className="max-h-[70vh] object-contain"
           />
 
           <button
@@ -65,7 +68,7 @@ function HowToPlay({ isOpen, onClose }) {
           </button>
         </div>
 
-        <div className="mt-4 flex justify-center space-x-2">
+        <div className="mt-4 hidden justify-center space-x-2 md:flex">
           {images.map((_, idx) => (
             <button
               key={idx}

@@ -21,7 +21,6 @@ function HowToPlay({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
       <div className="relative w-full max-w-xl rounded-lg bg-stone-800 p-4">
-        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute right-2 top-1 text-2xl text-white hover:text-red-500"
@@ -29,7 +28,6 @@ function HowToPlay({ isOpen, onClose }) {
           &times;
         </button>
 
-        {/* Carousel Image */}
         <div className="flex flex-col items-center justify-center md:flex-row md:space-x-4">
           <button
             onClick={prevSlide}
@@ -67,7 +65,6 @@ function HowToPlay({ isOpen, onClose }) {
           </button>
         </div>
 
-        {/* Indicators */}
         <div className="mt-4 flex justify-center space-x-2">
           {images.map((_, idx) => (
             <button

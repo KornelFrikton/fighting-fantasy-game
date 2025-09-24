@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Markdown from "react-markdown";
+import remarkBreaks from "remark-breaks";
 
 import book from "./pictures/book-cover.svg";
 import direction from "./pictures/direction-signs.svg";
@@ -42,8 +44,8 @@ function Page({ page, text, routes, handleTurn, reduces }) {
         <img className="mr-2 h-8 rounded-md" src={book} alt="Page" />
         Page: {page}
       </div>
-      <div className="mx-4 rounded border-4 bg-gradient-to-br from-sky-900 to-lime-900 p-2 text-left text-lg first-letter:float-left first-letter:mr-2 first-letter:text-7xl first-letter:font-bold first-letter:text-white first-line:uppercase first-line:tracking-widest">
-        {text}
+      <div className="mx-4 rounded border-4 bg-gradient-to-br from-sky-900 to-lime-900 p-4 text-left text-lg leading-relaxed [&>p:first-child]:first-letter:text-4xl [&>p:first-child]:first-letter:font-bold [&>p:first-child]:first-letter:italic [&>p]:mb-2 [&>p]:indent-6">
+        <Markdown remarkPlugins={[remarkBreaks]}>{text}</Markdown>
       </div>
       <div className={effectField}>
         <img className="mr-2 h-8 rounded-md" src={flask} alt="Effect" />

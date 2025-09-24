@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Page from "./components/page";
 import Player from "./components/player";
@@ -8,13 +8,9 @@ import cover from "./components/pictures/cover.jpg";
 
 function App() {
   const [book, setBook] = useState([]);
-  const [allPage, setallPage] = useState([]);
 
   const [actual, setActual] = useState();
   const [isLoading, setIsLoading] = useState(false);
-
-  const [reduces, setReduces] = useState({ skill: 0, luck: 0, stamina: 0 });
-  const [enemy, setEnemy] = useState({ name: "", skill: 0, stamina: 0 });
 
   const [start, setStart] = useState(false);
   const [character, setCharacter] = useState(false);
@@ -45,24 +41,18 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    const actualPage = book.filter((item) => item.page === actual);
-    return setallPage(actualPage);
-  }, [actual]);
+  const currentPage = book.find((item) => item.page === actual);
 
-  useEffect(() => {
-    if (typeof allPage[0] !== "undefined") {
-      const actualReduces = allPage[0].reduces;
-      return setReduces(actualReduces);
-    }
-  }, [allPage]);
-
-  useEffect(() => {
-    if (typeof allPage[0] !== "undefined") {
-      const actualEnemy = allPage[0].enemy;
-      return setEnemy(actualEnemy);
-    }
-  }, [allPage]);
+  const currentReduces = currentPage?.reduces || {
+    skill: 0,
+    luck: 0,
+    stamina: 0,
+  };
+  const currentEnemy = currentPage?.enemy || {
+    name: "",
+    skill: 0,
+    stamina: 0,
+  };
 
   function handleTurn(e) {
     e.preventDefault();
@@ -85,18 +75,6 @@ function App() {
   function handleDead() {
     return setActual(110);
   }
-
-  const pageList = allPage.map((item) => (
-    <Page
-      page={item.page}
-      text={item.text}
-      key={item._id}
-      routes={item.routes}
-      reduces={item.reduces}
-      enemy={item.enemy}
-      handleTurn={handleTurn}
-    />
-  ));
 
   return (
     <div className="min-h-screen bg-stone-800 text-center text-white">
@@ -122,15 +100,27 @@ function App() {
         </div>
         <div className={characterField}>
           <Player
-            reduces={reduces}
-            enemy={enemy}
+            reduces={currentReduces}
+            enemy={currentEnemy}
             handleStart={handleStart}
             start={start}
             newGame={handleNewGame}
             handleDead={handleDead}
           />
         </div>
-        <div className={pageField}>{pageList}</div>
+        <div className={pageField}>
+          {currentPage && (
+            <Page
+              page={currentPage.page}
+              text={currentPage.text}
+              key={currentPage._id}
+              routes={currentPage.routes}
+              reduces={currentPage.reduces}
+              enemy={currentPage.enemy}
+              handleTurn={handleTurn}
+            />
+          )}
+        </div>
       </header>
     </div>
   );

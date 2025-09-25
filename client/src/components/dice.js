@@ -34,7 +34,11 @@ function Dice({ spin }) {
 
   return (
     <div>
-      <img className="h-14 rounded-lg" src={diceSide} alt={diceSide} />
+      <img
+        className="h-14 rounded-lg"
+        src={diceSide}
+        alt={`Dice showing ${spin - 6}`}
+      />
     </div>
   );
 }

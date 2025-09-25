@@ -38,9 +38,9 @@ function Skilltest({ skill, getRandomDice, handleClose }) {
   return (
     <div>
       <div className="p-1 text-lg tracking-tight">
-        If you are ever asked to test your SKILL, roll 2 die. If the total is
-        the same or less than your SKILL, then you are successful. If the dice
-        roll is higher, then you have failed.
+        If you are ever asked to test your SKILL, roll 2 dice. If the total is
+        the same or less than your SKILL, then you are successful. If the total
+        is higher, then you have failed.
       </div>
       <div className="p-2 text-xl font-bold uppercase tracking-wider">
         <div>Test total: {testSkill + testSkill2}</div>

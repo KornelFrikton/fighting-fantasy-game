@@ -47,7 +47,8 @@ You have to just click [HERE](https://fighting-fantasy-game-01.onrender.com) to 
 
 ## Version
 
-*1.0 - 29/09/2024* - Publishing of the application  
+*1.0 - 29/09/2024* - Publishing of the application
+*1.1 - 25/09/2025* - Small development (UX, Give up button, How to play)  
 
 ## Author
 

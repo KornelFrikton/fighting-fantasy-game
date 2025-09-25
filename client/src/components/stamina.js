@@ -10,17 +10,17 @@ function Stamina({ stamina, showDescription }) {
   return (
     <div>
       <div className="flex items-center justify-center p-1 text-2xl font-bold uppercase tracking-wider">
-        <img className="mr-2 h-8 rounded-md" src={life} alt="Stamina" />
+        <img className="mr-2 h-8 rounded-md" src={life} alt="Stamina icon" />
         Stamina: {stamina}
       </div>
-      <div className={staminaField}>
+      <p className={staminaField}>
         Roll 2 dice and add 12. The total is your
-        <span className="font-semibold"> STAMINA</span>. This represents your
+        <span className="font-bold"> STAMINA</span>. This represents your
         strength, fitness, life and energy. If this is ever reduced to 0, then
         you are dead. Certain items can increase STAMINA. The passages you read
         will tell you when you have lost STAMINA and when and how it can be
         restored.
-      </div>
+      </p>
     </div>
   );
 }

@@ -87,7 +87,7 @@ function Combat({ enemy, skill, stamina, staminaDecrease, getRandomDice }) {
   return (
     <div>
       <h2 className="m-4 flex items-center justify-center rounded border-4 bg-gradient-to-r from-red-900 to-slate-900 p-2 text-xl font-bold uppercase tracking-wider">
-        <img className="mr-2 h-8 rounded-md" src={combat} alt="Combat" />
+        <img className="mr-2 h-8 rounded-md" src={combat} alt="Combat icon" />
         Combat
       </h2>
       <ol className="m-4 list-outside list-decimal rounded border p-2 pl-6 text-left tracking-tight">
@@ -196,7 +196,7 @@ function Combat({ enemy, skill, stamina, staminaDecrease, getRandomDice }) {
         </div>
       </div>
       <div className={win}>
-        <img className="mr-2 h-8 rounded-md" src={winner} alt="Winner" />
+        <img className="mr-2 h-8 rounded-md" src={winner} alt="Winner icon" />
         You win!
       </div>
     </div>
